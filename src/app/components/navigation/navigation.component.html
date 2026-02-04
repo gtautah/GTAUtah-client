@@ -1,0 +1,16 @@
+<header class="header">
+  <div class="container">
+    <div class="header-content">
+      <div class="logo">GTA - Utah</div>
+      <nav>
+        <ul class="nav-menu">
+          <li *ngFor="let item of menuItems">
+            <a [routerLink]="item.path" [class.active]="isActive(item.path)">
+              {{ item.label }}
+            </a>
+          </li>
+        </ul>
+      </nav>
+    </div>
+  </div>
+</header>

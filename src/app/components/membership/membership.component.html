@@ -1,0 +1,49 @@
+<section class="section" style="padding-top: 40px;">
+  <div class="container">
+    <h2 class="section-title">Membership Plans</h2>
+    <p style="text-align: center; font-size: 1.1rem; color: #666; margin-bottom: 3rem; max-width: 800px; margin-left: auto; margin-right: auto;">
+      Join GTA Utah and become part of a vibrant community dedicated to promoting sports and cultural activities. 
+      Choose the membership plan that best fits your needs.
+    </p>
+    <div class="membership-cards">
+      <div class="membership-card" [class.featured]="membership.featured" *ngFor="let membership of membershipTypes">
+        <div class="membership-type">{{ membership.type }}</div>
+        <div class="membership-price">{{ membership.price }}</div>
+        <div style="color: #999; margin-bottom: 2rem;">{{ membership.period }}</div>
+        <ul class="membership-features">
+          <li *ngFor="let feature of membership.features">✓ {{ feature }}</li>
+        </ul>
+        <a routerLink="/contact" class="btn" style="margin-top: 2rem; display: inline-block;">Join Now</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="section" style="background-color: #f9f9f9;">
+  <div class="container">
+    <h2 class="section-title">Membership Benefits</h2>
+    <div class="card-grid">
+      <div class="card" *ngFor="let benefit of benefits">
+        <div class="card-content" style="text-align: center;">
+          <div style="font-size: 4rem; margin-bottom: 1rem;">{{ benefit.icon }}</div>
+          <h3 class="card-title">{{ benefit.title }}</h3>
+          <p class="card-text">{{ benefit.description }}</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="section">
+  <div class="container">
+    <div style="max-width: 800px; margin: 0 auto; text-align: center; background: white; padding: 3rem; border-radius: 10px; box-shadow: 0 5px 15px rgba(0,0,0,0.1);">
+      <h2 style="color: #1e3c72; margin-bottom: 1rem;">Ready to Join?</h2>
+      <p style="color: #666; margin-bottom: 2rem; line-height: 1.8;">
+        Become a member today and start enjoying all the benefits of being part of the GTA Sports community. 
+        For questions or assistance with registration, please contact us.
+      </p>
+      <a routerLink="/contact" class="btn">Contact Us</a>
+      <a routerLink="/events" class="btn btn-secondary" style="margin-left: 1rem;">View Events</a>
+    </div>
+  </div>
+</section>

@@ -1,0 +1,29 @@
+<section class="section" style="padding-top: 40px;">
+  <div class="container">
+    <h2 class="section-title">Our Sports</h2>
+    <p style="text-align: center; font-size: 1.1rem; color: #666; margin-bottom: 3rem; max-width: 800px; margin-left: auto; margin-right: auto;">
+      GTA Sports offers a wide variety of sports activities for all ages and skill levels. 
+      Join us to participate in tournaments, training sessions, and friendly matches.
+    </p>
+    <div class="sports-grid">
+      <div class="sport-card" *ngFor="let sport of sports">
+        <img [src]="sport.image" [alt]="sport.name" class="sport-image">
+        <div class="sport-name">{{ sport.name }}</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="section" style="background-color: #f9f9f9;">
+  <div class="container">
+    <h2 class="section-title">Join Our Sports Programs</h2>
+    <div style="max-width: 800px; margin: 0 auto; text-align: center;">
+      <p style="font-size: 1.1rem; color: #666; line-height: 1.8; margin-bottom: 2rem;">
+        Whether you're a beginner or an experienced athlete, we have programs tailored for you. 
+        Our experienced coaches and trainers will help you improve your skills and enjoy the game.
+      </p>
+      <a routerLink="/membership" class="btn">Become a Member</a>
+      <a routerLink="/contact" class="btn btn-secondary" style="margin-left: 1rem;">Contact Us</a>
+    </div>
+  </div>
+</section>
