@@ -7,9 +7,9 @@ import { Component } from '@angular/core';
 })
 export class ContactComponent {
   contactInfo = {
-    email: "contact@gtasports.org",
-    phone: "+1 (555) 123-4567",
-    address: "Global Telangana Association Sports",
+    email: "gtautah@globaltelangana.org",
+    phone: "",
+    address: "Global Telangana Association - Utah Chapter, United States",
     location: "United States"
   };
 

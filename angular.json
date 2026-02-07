@@ -3,7 +3,7 @@
   "version": 1,
   "newProjectRoot": "projects",
   "projects": {
-    "gta-sports": {
+    "gta-utah": {
       "projectType": "application",
       "schematics": {},
       "root": "",
@@ -13,7 +13,7 @@
         "build": {
           "builder": "@angular-devkit/build-angular:browser",
           "options": {
-            "outputPath": "dist/gta-sports",
+            "outputPath": "dist/gta-utah",
             "index": "src/index.html",
             "main": "src/main.ts",
             "polyfills": [
@@ -59,10 +59,10 @@
           "builder": "@angular-devkit/build-angular:dev-server",
           "configurations": {
             "production": {
-              "buildTarget": "gta-sports:build:production"
+              "buildTarget": "gta-utah:build:production"
             },
             "development": {
-              "buildTarget": "gta-sports:build:development"
+              "buildTarget": "gta-utah:build:development"
             }
           },
           "defaultConfiguration": "development"
