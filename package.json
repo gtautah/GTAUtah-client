@@ -1,7 +1,7 @@
 {
-  "name": "gta-sports",
+  "name": "gta-utah",
   "version": "1.0.0",
-  "description": "Global Telangana Association Sports Website",
+  "description": "Global Telangana Association-Utah Chapter",
   "scripts": {
     "ng": "ng",
     "start": "ng serve",
