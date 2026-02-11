@@ -9,6 +9,8 @@ import { ContactComponent } from './components/contact/contact.component';
 import { EventsComponent } from './components/events/events.component';
 import { MembershipComponent } from './components/membership/membership.component';
 import { FormsModule } from '@angular/forms';
+import { LeadershipComponent } from './components/leadership/leadership.component'; 
+import { GalleryComponent } from './components/gallery/gallery.component';
 
 @NgModule({
   declarations: [
@@ -18,7 +20,9 @@ import { FormsModule } from '@angular/forms';
     SportsComponent,
     ContactComponent,
     EventsComponent,
-    MembershipComponent
+    MembershipComponent,
+    LeadershipComponent,
+    GalleryComponent
   ],
   imports: [
     BrowserModule,

@@ -1,0 +1,49 @@
+<div class="events-wrapper">
+
+  <div class="header1">
+    <h2 *ngIf="selectedYear === 2025">Past Events</h2>
+    <h2 *ngIf="selectedYear === 2026">Current Events</h2>
+
+    <div class="year-filter">
+      <button 
+        [class.active]="selectedYear === 2025"
+        (click)="changeYear(2025)">
+        2025
+      </button>
+
+      <button 
+        [class.active]="selectedYear === 2026"
+        (click)="changeYear(2026)">
+        2026
+      </button>
+    </div>
+  </div>
+
+  <div class="events-grid">
+    <div 
+      class="event-card"
+      *ngFor="let event of filteredEvents"
+      (click)="goToDetails(event.id)">
+
+      <div class="event-image"
+           [style.backgroundImage]="'url(' + event.image + ')'">
+      </div>
+
+      <div class="event-body">
+        <div class="event-meta">
+          <span class="date">{{ event.date }}</span>
+          <span class="location">{{ event.location }}</span>
+        </div>
+
+        <h3>{{ event.title }}</h3>
+        <p>{{ event.description }}</p>
+
+        <div class="details-link">
+          View Details →
+        </div>
+      </div>
+
+    </div>
+  </div>
+
+</div>
