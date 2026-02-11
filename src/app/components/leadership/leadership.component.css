@@ -1,0 +1,94 @@
+.events-wrapper {
+  padding: 60px 80px;
+  background-color: #f4f6f9;
+  min-height: 100vh;
+}
+
+.header1 {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 40px;
+}
+
+.header h2 {
+  font-size: 28px;
+  font-weight: 600;
+}
+
+.year-filter button {
+  margin-left: 10px;
+  padding: 8px 18px;
+  border: 1px solid #d0d5dd;
+  background: white;
+  border-radius: 20px;
+  cursor: pointer;
+  transition: 0.3s ease;
+}
+
+.year-filter button.active {
+  background: #1e293b;
+  color: white;
+  border-color: #1e293b;
+}
+
+.year-filter button:hover {
+  background: #334155;
+  color: white;
+}
+
+.events-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+  gap: 30px;
+}
+
+.event-card {
+  background: white;
+  border-radius: 14px;
+  overflow: hidden;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.06);
+  cursor: pointer;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.event-card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.12);
+}
+
+.event-image {
+  height: 200px;
+  background-size: cover;
+  background-position: center;
+}
+
+.event-body {
+  padding: 20px;
+}
+
+.event-meta {
+  display: flex;
+  justify-content: space-between;
+  font-size: 13px;
+  color: #64748b;
+  margin-bottom: 12px;
+}
+
+.event-body h3 {
+  margin: 0 0 10px;
+  font-size: 18px;
+  font-weight: 600;
+}
+
+.event-body p {
+  font-size: 14px;
+  color: #475569;
+  margin-bottom: 15px;
+}
+
+.details-link {
+  font-size: 14px;
+  font-weight: 500;
+  color: #2563eb;
+}

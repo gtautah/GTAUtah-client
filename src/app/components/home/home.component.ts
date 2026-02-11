@@ -6,24 +6,43 @@ import { Component } from '@angular/core';
   styleUrls: ['./home.component.css']
 })
 export class HomeComponent {
-  welcomeMessage = "Welcome to Global Telangana Association- Utah";
-  missionStatement = "Our mission is to bring all Telanganites under one umbrella and create a platform to support sports activities and community engagement in Telangana & USA. GTA-Utah chapter is created to promote and support advancement of sports, culture and traditions of Telangana region.";
+  private slides!: NodeListOf<HTMLElement>;
+  private currentIndex = 0;
+  private intervalId: any;
+  private slideInterval = 4000; // 4 seconds
 
-  features = [
-    {
-      title: "Sports Activities",
-      description: "Join various sports events and competitions organized throughout the year.",
-      image: "assets/images/paddle.JPG"
-    },
-    {
-      title: "Community Events",
-      description: "Participate in cultural events and community gatherings that celebrate our heritage.",
-      image: "assets/images/community.jpg"
-    },
-    {
-      title: "Membership Benefits",
-      description: "Become a member and enjoy exclusive benefits, discounts, and priority access to events.",
-      image: "https://images.unsplash.com/photo-1521737604893-d14cc237f11d?w=600&q=80"
-    }
-  ];
+  ngAfterViewInit() {
+    this.slides = document.querySelectorAll('.hero-slideshow .slide');
+    this.startSlideshow();
+  }
+
+  startSlideshow() {
+    this.intervalId = setInterval(() => {
+      this.nextSlide();
+    }, this.slideInterval);
+  }
+
+  nextSlide() {
+    // Remove active from current slide
+    this.slides[this.currentIndex].classList.remove('active');
+
+    // Move to next
+    this.currentIndex = (this.currentIndex + 1) % this.slides.length;
+
+    // Add active to new slide
+    this.slides[this.currentIndex].classList.add('active');
+  }
+
+  pauseSlideshow() {
+    clearInterval(this.intervalId);
+  }
+
+  resumeSlideshow() {
+    this.startSlideshow();
+  }
+
+  ngOnDestroy() {
+    clearInterval(this.intervalId);
+  }
 }
+

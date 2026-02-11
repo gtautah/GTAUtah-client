@@ -1,0 +1,17 @@
+<div class="gallery-wrapper">
+  <h2 class="section-title">Event Gallery</h2>
+
+  <div class="gallery-grid">
+    <div class="gallery-card" *ngFor="let event of eventsGallery">
+      <h3>{{ event.title }}</h3>
+      <div class="video-container">
+        <iframe 
+          [src]="event.safeUrl" 
+          frameborder="0" 
+          allowfullscreen
+          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture">
+        </iframe>
+      </div>
+    </div>
+  </div>
+</div>
