@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import emailjs from '@emailjs/browser';
 
 @Component({
   selector: 'app-contact',
@@ -6,31 +7,41 @@ import { Component } from '@angular/core';
   styleUrls: ['./contact.component.css']
 })
 export class ContactComponent {
-  contactInfo = {
-    email: "gtautah@globaltelangana.org",
-    phone: "",
-    address: "Global Telangana Association - Utah Chapter, United States",
-    location: "United States"
-  };
+
+  private publicKey = 'PUBLIC_KEY';
+  private serviceId = 'SERVICE_ID';
+  private templateId = 'TEMPLATE_ID';
+  protected gtaEmail = 'gtautah@globaltelangana.org';
 
   formData = {
     name: '',
     email: '',
-    subject: '',
     message: ''
   };
 
-  onSubmit() {
-    if (this.formData.name && this.formData.email && this.formData.message) {
-      alert('Thank you for your message! We will get back to you soon.');
-      this.formData = {
-        name: '',
-        email: '',
-        subject: '',
-        message: ''
-      };
-    } else {
-      alert('Please fill in all required fields.');
-    }
+  isSubmitting = false;
+  successMessage = '';
+
+  sendEmail() {
+    this.isSubmitting = true;
+
+    emailjs.send(
+      this.serviceId,
+      this.templateId,
+      {
+        from_name: this.formData.name,
+        from_email: this.formData.email,
+        message: this.formData.message,
+        to_email: this.gtaEmail
+      },
+      this.publicKey
+    ).then(() => {
+      this.successMessage = 'Message sent successfully!';
+      this.formData = { name: '', email: '', message: '' };
+      this.isSubmitting = false;
+    }).catch(error => {
+      console.error(error);
+      this.isSubmitting = false;
+    });
   }
 }
