@@ -10,11 +10,16 @@ import { filter } from 'rxjs/operators';
 export class NavigationComponent {
   activeRoute: string = '';
 
-  menuItems = [
+  leftMenuItems = [
     { path: '/home', label: 'Home' },
-    { path: '/sports', label: 'Sports' },
+    { path: '/leadership', label: 'Leadership' },
     { path: '/events', label: 'Events' },
+    { path: '/gallery', label: 'Gallery' },
+  ];
+
+  rightMenuItems = [
     { path: '/membership', label: 'Membership' },
+    { path: '/sponsors', label: 'Sponsors' },
     { path: '/contact', label: 'Contact' }
   ];
 

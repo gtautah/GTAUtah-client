@@ -1,16 +1,34 @@
+<div class="announcement-bar">
+  <p><span class="org-name">Global Telangana Association - Utah Chapter</span>&nbsp;&nbsp;•&nbsp;&nbsp;<span
+      class="org-telugu">గ్లోబల్ తెలంగాణ అసోసియేషన్ - ఉటా చాప్టర్</span>&nbsp;&nbsp;•&nbsp;&nbsp;<span
+      class="org-nonprofit">501(c)(3) Non-Profit Organization</span></p>
+</div>
+
 <header class="header">
-  <div class="container">
-    <div class="header-content">
-      <div class="logo">GTA - Utah</div>
-      <nav>
-        <ul class="nav-menu">
-          <li *ngFor="let item of menuItems">
-            <a [routerLink]="item.path" [class.active]="isActive(item.path)">
-              {{ item.label }}
-            </a>
-          </li>
-        </ul>
-      </nav>
-    </div>
-  </div>
+  <nav class="nav">
+
+    <ul class="nav-links nav-left">
+      <li *ngFor="let item of leftMenuItems">
+        <a [routerLink]="item.path" [class.active]="isActive(item.path)">
+          {{ item.label }}
+        </a>
+      </li>
+    </ul>
+
+    <a href="index.html" class="logo">
+      <img src="../assets/logos/utahchapter-logo.png" alt="GTA Utah Chapter">
+    </a>
+    <ul class="nav-links nav-right">
+      <li *ngFor="let item of rightMenuItems">
+        <a [routerLink]="item.path" [class.active]="isActive(item.path)">
+          {{ item.label }}
+        </a>
+      </li>
+    </ul>
+    <button class="mobile-menu-btn" aria-label="Toggle menu">
+      <span></span>
+      <span></span>
+      <span></span>
+    </button>
+  </nav>
 </header>

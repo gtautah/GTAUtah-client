@@ -1,73 +1,26 @@
-<section class="hero">
-  <div class="container">
-    <h1>{{ welcomeMessage }}</h1>
-    <p>{{ missionStatement }}</p>
-  </div>
-</section>
-
-<section class="section">
-  <div class="container">
-    <h2 class="section-title">What We Offer</h2>
-    <div class="card-grid">
-      <div class="card" *ngFor="let feature of features">
-        <img [src]="feature.image" [alt]="feature.title" class="card-image">
-        <div class="card-content">
-          <h3 class="card-title">{{ feature.title }}</h3>
-          <p class="card-text">{{ feature.description }}</p>
-        </div>
+<main>
+  <section class="hero">
+    <div class="hero-slideshow">
+      <div class="slide active" style="background-image: url('../assets/backgrounds/charminar.png')"></div>
+      <div class="slide" style="background-image: url('../assets/backgrounds/kakatiya_thoranam.png')"></div>
+      <div class="slide" style="background-image: url('../assets/backgrounds/ramappa.png')"></div>
+      <div class="slide" style="background-image: url('../assets/backgrounds/bathukamma.png')"></div>
+    </div>
+    <div class="hero-overlay"></div>
+    <div class="hero-content">
+      <h1>Celebrating <span>Telangana</span> Heritage in Utah</h1>
+      <p class="description">Join our vibrant community celebrating Telangana culture, traditions, and heritage. Connect
+        with families, participate in cultural events, and preserve our rich legacy for future generations.</p>
+      <div class="hero-buttons">
+        <a href="#" class="btn btn-primary">Join Us</a>
+        <a href="#" class="btn btn-secondary">Our Events</a>
       </div>
     </div>
-  </div>
-</section>
-
-<section class="section" style="background-color: #f9f9f9;">
-  <div class="container">
-    <h2 class="section-title">About GTA-Utah</h2>
-    <div style="max-width: 900px; margin: 0 auto; text-align: center;">
-      <p style="font-size: 1.1rem; color: #666; line-height: 1.8; margin-bottom: 2rem;">
-        Starting from the aspirations of the NRI's to unite the entire Telangana community, with a strong will, 
-        the seeds of "Vishwavedika" has been planted to ensure everyone comes together. Global Telangana Association 
-        vision is to become a volunteer driven organization that operates with the most transparent way to support 
-        the development activities in Telangana region and USA.
-      </p>
-      <a routerLink="/membership" class="btn">Become a Member</a>
+    <div class="slide-indicators">
+      <button class="indicator active" data-slide="0"></button>
+      <button class="indicator" data-slide="1"></button>
+      <button class="indicator" data-slide="2"></button>
+      <button class="indicator" data-slide="3"></button>
     </div>
-  </div>
-</section>
-
-<footer class="footer">
-  <div class="container">
-    <div class="footer-content">
-      <div class="footer-section">
-        <h3>Quick Links</h3>
-        <ul>
-          <li><a routerLink="/home">Home</a></li>
-          <li><a routerLink="/sports">Sports</a></li>
-          <li><a routerLink="/events">Events</a></li>
-          <li><a routerLink="/membership">Membership</a></li>
-          <li><a routerLink="/contact">Contact</a></li>
-        </ul>
-      </div>
-      <div class="footer-section">
-        <h3>Contact Info</h3>
-        <ul>
-          <li>Email: gtautah&#64;globaltelangana.org</li>
-          <li>Phone: </li>
-          <li>Address: Global Telangana Association - Utah Chapter, United States</li>
-        </ul>
-      </div>
-      <div class="footer-section">
-        <h3>Follow Us</h3>
-        <ul>
-          <li><a href="#">Facebook</a></li>
-          <li><a href="#">Twitter</a></li>
-          <li><a href="#">Instagram</a></li>
-          <li><a href="#">LinkedIn</a></li>
-        </ul>
-      </div>
-    </div>
-    <div class="footer-bottom">
-      <p>&copy; 2024 Global Telangana Association Utah(GTA). All rights reserved.</p>
-    </div>
-  </div>
-</footer>
+  </section>
+</main>
