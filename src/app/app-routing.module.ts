@@ -15,7 +15,7 @@ const routes: Routes = [
   { path: 'home', component: HomeComponent },
   { path: 'leadership', component: WorkInProgressComponent },
   { path: 'contact', component: ContactComponent },
-  { path: 'events', component: EventsComponent },
+  { path: 'events', component: LeadershipComponent },
   // {path: 'work-in-progress', component: WorkInProgressComponent},
   {
     path: 'events/:id',

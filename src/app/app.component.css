@@ -1,3 +1,8 @@
+
+.navbar-container {
+  height: 70px; /* whatever your navbar height is */
+}
+
 .main-content {
-  padding-top: 230px; /* Adjust based on your header height */
+  padding-top: 70px; /* match the navbar height */
 }
