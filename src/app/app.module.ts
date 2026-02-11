@@ -11,7 +11,7 @@ import { MembershipComponent } from './components/membership/membership.componen
 import { FormsModule } from '@angular/forms';
 import { LeadershipComponent } from './components/leadership/leadership.component'; 
 import { GalleryComponent } from './components/gallery/gallery.component';
-
+import { FooterComponent } from './components/shared/footer/footer.component';
 @NgModule({
   declarations: [
     AppComponent,
@@ -27,7 +27,8 @@ import { GalleryComponent } from './components/gallery/gallery.component';
   imports: [
     BrowserModule,
     AppRoutingModule,
-    FormsModule
+    FormsModule,
+    FooterComponent
   ],
   providers: [],
   bootstrap: [AppComponent]
