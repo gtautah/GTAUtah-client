@@ -1,68 +1,53 @@
-<section class="section" style="padding-top: 40px;">
-  <div class="container">
-    <h2 class="section-title">Contact Us</h2>
-    <div class="contact-layout" style="display: grid; grid-template-columns: 1fr 1fr; gap: 3rem; margin-top: 3rem;">
-      <div>
-        <h3 style="color: #1e3c72; margin-bottom: 2rem; font-size: 1.8rem;">Get in Touch</h3>
-        <div style="margin-bottom: 2rem;">
-          <h4 style="color: #2a5298; margin-bottom: 0.5rem;">Email</h4>
-          <p style="color: #666; font-size: 1.1rem;">{{ contactInfo.email }}</p>
-        </div>
-        <div style="margin-bottom: 2rem;">
-          <h4 style="color: #2a5298; margin-bottom: 0.5rem;">Phone</h4>
-          <p style="color: #666; font-size: 1.1rem;">{{ contactInfo.phone }}</p>
-        </div>
-        <div style="margin-bottom: 2rem;">
-          <h4 style="color: #2a5298; margin-bottom: 0.5rem;">Address</h4>
-          <p style="color: #666; font-size: 1.1rem;">
-            {{ contactInfo.address }}<br>
-            {{ contactInfo.location }}
-          </p>
-        </div>
-        <div style="margin-top: 3rem;">
-          <h4 style="color: #2a5298; margin-bottom: 1rem;">Follow Us</h4>
-          <div style="display: flex; gap: 1rem;">
-            <a href="#" style="color: #2a5298; font-size: 1.5rem;">Facebook</a>
-            <a href="#" style="color: #2a5298; font-size: 1.5rem;">Twitter</a>
-            <a href="#" style="color: #2a5298; font-size: 1.5rem;">Instagram</a>
-            <a href="#" style="color: #2a5298; font-size: 1.5rem;">LinkedIn</a>
-          </div>
-        </div>
-      </div>
-      <div>
-        <form class="contact-form" (ngSubmit)="onSubmit()">
-          <div class="form-group">
-            <label for="name">Name *</label>
-            <input type="text" id="name" name="name" [(ngModel)]="formData.name" required>
-          </div>
-          <div class="form-group">
-            <label for="email">Email *</label>
-            <input type="email" id="email" name="email" [(ngModel)]="formData.email" required>
-          </div>
-          <div class="form-group">
-            <label for="subject">Subject</label>
-            <input type="text" id="subject" name="subject" [(ngModel)]="formData.subject">
-          </div>
-          <div class="form-group">
-            <label for="message">Message *</label>
-            <textarea id="message" name="message" [(ngModel)]="formData.message" required></textarea>
-          </div>
-          <button type="submit" class="btn" style="width: 100%;">Send Message</button>
-        </form>
-      </div>
-    </div>
-  </div>
-</section>
+<div class="contact-wrapper">
 
-<section class="section" style="background-color: #f9f9f9;">
-  <div class="container">
-    <div style="max-width: 800px; margin: 0 auto; text-align: center;">
-      <h2 style="color: #1e3c72; margin-bottom: 1rem;">Office Hours</h2>
-      <p style="color: #666; font-size: 1.1rem; line-height: 1.8;">
-        Monday - Friday: 9:00 AM - 6:00 PM<br>
-        Saturday: 10:00 AM - 4:00 PM<br>
-        Sunday: Closed
-      </p>
-    </div>
+  <div class="contact-card">
+    <h2>Contact Us</h2>
+    <p>Have a question? Reach out to our team.</p>
+
+    <form (ngSubmit)="sendEmail()" #contactForm="ngForm">
+
+      <input 
+        type="text"
+        name="name"
+        [(ngModel)]="formData.name"
+        placeholder="Your Name"
+        required />
+
+      <input 
+        type="email"
+        name="email"
+        [(ngModel)]="formData.email"
+        placeholder="Your Email"
+        required />
+
+      <textarea
+        name="message"
+        [(ngModel)]="formData.message"
+        placeholder="Write your message..."
+        rows="5"
+        required>
+      </textarea>
+
+      <button type="submit" [disabled]="isSubmitting">
+        {{ isSubmitting ? 'Sending...' : 'Submit' }}
+      </button>
+
+      <div class="success" *ngIf="successMessage">
+        {{ successMessage }}
+      </div>
+
+    </form>
   </div>
-</section>
+
+  <!-- Footer Section -->
+  <div class="contact-footer">
+    <h3>Connect With Us</h3>
+    <div class="social-links">
+      <a href="https://instagram.com" target="_blank">Instagram</a>
+      <a href="https://facebook.com" target="_blank">Facebook</a>
+      <a href="https://youtube.com" target="_blank">YouTube</a>
+    </div>
+    <p>Email: {{ gtaEmail }}</p>
+  </div>
+
+</div>

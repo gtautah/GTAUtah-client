@@ -8,19 +8,22 @@ import { MembershipComponent } from './components/membership/membership.componen
 import { EventDetailsComponent } from './components/events/event-details/event-details.component';
 import { LeadershipComponent } from './components/leadership/leadership.component';
 import { GalleryComponent } from './components/gallery/gallery.component';
+import { WorkInProgressComponent } from './components/shared/work-in-progress/work-in-progress.component';
 
 const routes: Routes = [
   { path: '', component: HomeComponent },
   { path: 'home', component: HomeComponent },
-  { path: 'leadership', component: LeadershipComponent },
+  { path: 'leadership', component: WorkInProgressComponent },
   { path: 'contact', component: ContactComponent },
   { path: 'events', component: EventsComponent },
+  // {path: 'work-in-progress', component: WorkInProgressComponent},
   {
     path: 'events/:id',
     component: EventDetailsComponent
   },
+  {path: 'sponsors', component: WorkInProgressComponent},
   { path: 'gallery', component: GalleryComponent },
-  { path: 'membership', component: MembershipComponent },
+  { path: 'membership', component: WorkInProgressComponent },
   { path: '**', redirectTo: '/home' }
 ];
 

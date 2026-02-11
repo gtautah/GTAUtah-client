@@ -1,0 +1,49 @@
+.wip-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 80vh;
+  background: #f4f6f9;
+  padding: 20px;
+}
+
+.wip-card {
+  text-align: center;
+  background: white;
+  padding: 50px 40px;
+  border-radius: 16px;
+  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.08);
+  max-width: 500px;
+  width: 100%;
+}
+
+.icon {
+  font-size: 50px;
+  margin-bottom: 20px;
+}
+
+.wip-card h2 {
+  font-size: 24px;
+  margin-bottom: 15px;
+  font-weight: 600;
+}
+
+.wip-card p {
+  font-size: 15px;
+  color: #64748b;
+  margin-bottom: 25px;
+}
+
+button {
+  padding: 10px 20px;
+  border: none;
+  border-radius: 8px;
+  background: #1e293b;
+  color: white;
+  cursor: pointer;
+  transition: 0.3s ease;
+}
+
+button:hover {
+  background: #334155;
+}
