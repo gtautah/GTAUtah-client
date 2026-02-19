@@ -1,49 +1,175 @@
-<div class="events-wrapper">
+<div>
+        <!-- Leadership Hero -->
+        <section class="page-hero leadership-hero">
+            <div class="page-hero-content">
+                <h1>Our <span>Leadership</span></h1>
+                <p>Building community through dedicated service</p>
+            </div>
+        </section>
 
-  <div class="header1">
-    <h2 *ngIf="selectedYear === 2025">Past Events</h2>
-    <h2 *ngIf="selectedYear === 2026">Current Events</h2>
+        <!-- Leadership Section -->
+        <section class="leadership-section">
+            <div class="container">
+                <div class="leadership-header">
+                    <span class="founding-badge">Founding Year 2025-2026</span>
+                    <h2 class="section-title">Founding Board & Executive Team</h2>
+                </div>
 
-    <div class="year-filter">
-      <button 
-        [class.active]="selectedYear === 2025"
-        (click)="changeYear(2025)">
-        2025
-      </button>
+                <div class="members-grid">
+                            <!-- President -->
+                            <div class="member-card">
+                                <div class="member-image zoom-out">
+                                    <img src="../assets/leadership/vishnu_mogulla.jpeg" alt="Vishal Reddy Patlolla">
+                                </div>
+                                <div class="member-info">
+                                    <h3>Vishal Reddy Patlolla</h3>
+                                    <span class="designation">President</span>
+                                </div>
+                            </div>
 
-      <button 
-        [class.active]="selectedYear === 2026"
-        (click)="changeYear(2026)">
-        2026
-      </button>
-    </div>
-  </div>
+                            <!-- Vice President -->
+                            <div class="member-card">
+                                <div class="member-image zoom-out">
+                                    <img src="../assets/leadership/vishnu_mogulla.jpeg" alt="Vishnu Mogulla">
+                                </div>
+                                <div class="member-info">
+                                    <h3>Vishnu Mogulla</h3>
+                                    <span class="designation">Vice President</span>
+                                </div>
+                            </div>
 
-  <div class="events-grid">
-    <div 
-      class="event-card"
-      *ngFor="let event of filteredEvents"
-      (click)="goToDetails(event.id)">
+                            <!-- General Secretary -->
+                            <div class="member-card">
+                                <div class="member-image zoom-face">
+                                    <img src="../assets/leadership/bharath_parvath.jpeg" alt="Bharath Parvath">
+                                </div>
+                                <div class="member-info">
+                                    <h3>Bharath Parvath</h3>
+                                    <span class="designation">General Secretary</span>
+                                </div>
+                            </div>
 
-      <div class="event-image"
-           [style.backgroundImage]="'url(' + event.image + ')'">
+                            <!-- Treasurer -->
+                            <div class="member-card">
+                                <div class="member-image">
+                                    <img src="../assets/leadership/vineel_sidham.jpeg" alt="Vineel Siddam">
+                                </div>
+                                <div class="member-info">
+                                    <h3>Vineel Siddam</h3>
+                                    <span class="designation">Treasurer</span>
+                                </div>
+                            </div>
+
+                            <!-- Joint Secretary -->
+                            <div class="member-card">
+                                <div class="member-image">
+                                    <img src="../assets/leadership/uday_vinamuri.jpeg" alt="Uday Vinjamuri">
+                                </div>
+                                <div class="member-info">
+                                    <h3>Uday Vinjamuri</h3>
+                                    <span class="designation">Joint Secretary</span>
+                                </div>
+                            </div>
+
+                            <!-- VP - Sponsorship & Events -->
+                            <div class="member-card">
+                                <div class="member-image">
+                                    <img src="../assets/leadership/sai_mukka.jpeg" alt="Sai K Mukka">
+                                </div>
+                                <div class="member-info">
+                                    <h3>Sai K Mukka</h3>
+                                    <span class="designation">VP - Sponsorship & Events</span>
+                                </div>
+                            </div>
+
+                            <!-- VP - Cultural -->
+                            <div class="member-card">
+                                <div class="member-image">
+                                    <img src="../assets/leadership/sravya_velide.jpeg" alt="Shravya Velide">
+                                </div>
+                                <div class="member-info">
+                                    <h3>Shravya Velide</h3>
+                                    <span class="designation">VP - Cultural</span>
+                                </div>
+                            </div>
+
+                            <!-- VP - Media & PR -->
+                            <div class="member-card">
+                                <div class="member-image">
+                                    <img src="../assets/leadership/kartheek.jpeg" alt="Karteek G.V.A">
+                                </div>
+                                <div class="member-info">
+                                    <h3>Karteek G.V.A</h3>
+                                    <span class="designation">VP - Media & PR</span>
+                                </div>
+                            </div>
+
+                            <!-- VP - Sports -->
+                            <div class="member-card">
+                                <div class="member-image">
+                                    <img src="../assets/leadership/saikiran_bachu.jpeg" alt="Saikiran Gupta Bachu">
+                                </div>
+                                <div class="member-info">
+                                    <h3>Saikiran Gupta Bachu</h3>
+                                    <span class="designation">VP - Sports</span>
+                                </div>
+                            </div>
+
+                            <!-- Technical Coordinator -->
+                            <div class="member-card">
+                                <div class="member-image zoom-face">
+                                    <img src="../assets/leadership/dinesh_attem.jpeg" alt="Dinesh Attem">
+                                </div>
+                                <div class="member-info">
+                                    <h3>Dinesh Attem</h3>
+                                    <span class="designation">Technical Coordinator</span>
+                                </div>
+                            </div>
+
+                            <!-- Technical Coordinator -->
+                            <div class="member-card">
+                                <div class="member-image">
+                                    <img src="../assets/leadership/santosh_avva.jpeg" alt="Santhosh Avva">
+                                </div>
+                                <div class="member-info">
+                                    <h3>Santhosh Avva</h3>
+                                    <span class="designation">Technical Coordinator</span>
+                                </div>
+                            </div>
+
+                            <!-- Sports & Volunteer Coordinator -->
+                            <div class="member-card">
+                                <div class="member-image zoom-face">
+                                    <img src="../assets/leadership/saikiran_mooga.jpeg" alt="Sai Kiran Mooga">
+                                </div>
+                                <div class="member-info">
+                                    <h3>Sai Kiran Mooga</h3>
+                                    <span class="designation">Sports & Volunteer Coordinator</span>
+                                </div>
+                            </div>
+
+                            <!-- Event Coordinator -->
+                            <div class="member-card">
+                                <div class="member-image">
+                                    <img src="../assets/leadership/kranthi.jpeg" alt="Kranthi Kumar Boorgula">
+                                </div>
+                                <div class="member-info">
+                                    <h3>Kranthi Kumar Boorgula</h3>
+                                    <span class="designation">Event Coordinator</span>
+                                </div>
+                            </div>
+
+                            <!-- Event Coordinator -->
+                            <div class="member-card">
+                                <div class="member-image">
+                                    <img src="../assets/leadership/naveen_jadhaw.jpeg" alt="Naveen Kumar Jadow">
+                                </div>
+                                <div class="member-info">
+                                    <h3>Naveen Kumar Jadow</h3>
+                                    <span class="designation">Event Coordinator</span>
+                                </div>
+                            </div>
+                        </div>
+            </div>
+        </section>
       </div>
-
-      <div class="event-body">
-        <div class="event-meta">
-          <span class="date">{{ event.date }}</span>
-          <span class="location">{{ event.location }}</span>
-        </div>
-
-        <h3>{{ event.title }}</h3>
-        <p>{{ event.description }}</p>
-
-        <div class="details-link">
-          View Details →
-        </div>
-      </div>
-
-    </div>
-  </div>
-
-</div>

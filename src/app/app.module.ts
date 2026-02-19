@@ -12,6 +12,7 @@ import { FormsModule } from '@angular/forms';
 import { LeadershipComponent } from './components/leadership/leadership.component'; 
 import { GalleryComponent } from './components/gallery/gallery.component';
 import { FooterComponent } from './components/shared/footer/footer.component';
+import { CalendarComponent } from './components/calendar/calendar.component';
 @NgModule({
   declarations: [
     AppComponent,
@@ -22,13 +23,14 @@ import { FooterComponent } from './components/shared/footer/footer.component';
     EventsComponent,
     MembershipComponent,
     LeadershipComponent,
-    GalleryComponent
+    GalleryComponent,
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     FormsModule,
-    FooterComponent
+    FooterComponent,
+    CalendarComponent
   ],
   providers: [],
   bootstrap: [AppComponent]

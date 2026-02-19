@@ -12,15 +12,18 @@ export class NavigationComponent {
 
   leftMenuItems = [
     { path: '/home', label: 'Home' },
-    { path: '/leadership', label: 'Leadership' },
     { path: '/events', label: 'Events' },
     { path: '/gallery', label: 'Gallery' },
+    { path: '/calendar', label: 'Calendar' },
+    // { path: '/sports', label: 'Sports' },
   ];
 
   rightMenuItems = [
+    { path: '/about-us', label: 'About Us' },
+    { path: '/leadership', label: 'Leadership' },
     { path: '/membership', label: 'Membership' },
-    { path: '/sponsors', label: 'Sponsors' },
-    { path: '/contact', label: 'Contact' }
+    // { path: '/sponsors', label: 'Sponsors' },
+    { path: '/blog', label: 'Blog' }
   ];
 
   constructor(private router: Router) {

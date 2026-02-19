@@ -1,0 +1,61 @@
+.nav-donate {
+    position: absolute;
+    right: 40px;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+.nav-donate .btn-donate {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    background: linear-gradient(135deg, var(--gold) 0%, #d4a82a 100%);
+    color: var(--text-dark);
+    font-weight: 700;
+    font-size: 0.85rem;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    padding: 12px 24px;
+    border-radius: 50px;
+    text-decoration: none;
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    box-shadow: 0 4px 15px rgba(201, 162, 39, 0.3);
+    animation: subtlePulse 3s ease-in-out infinite;
+    position: relative;
+    overflow: hidden;
+}
+
+.nav-donate .btn-donate::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(90deg, transparent, rgba(255,255,255,0.3), transparent);
+    transition: left 0.5s ease;
+}
+
+.nav-donate .btn-donate:hover::before {
+    left: 100%;
+}
+
+.nav-donate .btn-donate:hover {
+    transform: translateY(-3px) scale(1.02);
+    box-shadow: 0 8px 25px rgba(201, 162, 39, 0.5);
+    background: linear-gradient(135deg, #d4a82a 0%, #e0b52e 100%);
+}
+
+.nav-donate .btn-donate:active {
+    transform: translateY(-1px) scale(0.98);
+}
+
+.nav-donate .btn-donate svg {
+    width: 16px;
+    height: 16px;
+    transition: transform 0.3s ease;
+}
+
+.nav-donate .btn-donate:hover svg {
+    transform: scale(1.1);
+}

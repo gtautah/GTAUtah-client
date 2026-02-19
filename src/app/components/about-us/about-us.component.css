@@ -1,0 +1,435 @@
+/* Vision & Mission Section */
+.vision-mission-section {
+    padding: 50px 60px;
+    background: var(--bg-cream);
+}
+
+.vision-mission-section .container {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.vm-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 25px;
+}
+
+.vm-card {
+    background: var(--white);
+    border-radius: var(--radius-lg);
+    padding: 30px 28px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.06);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    border-top: 4px solid var(--primary);
+}
+
+.vm-card.vision {
+    border-top-color: var(--gold);
+}
+
+.vm-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 40px rgba(139, 21, 56, 0.12);
+}
+
+.vm-icon {
+    width: 60px;
+    height: 60px;
+    margin-bottom: 15px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: var(--primary-light);
+    border-radius: var(--radius-md);
+    color: var(--primary);
+}
+
+.vm-card.vision .vm-icon {
+    background: linear-gradient(135deg, var(--gold) 0%, #D4AF37 100%);
+    color: var(--white);
+}
+
+.vm-card h2 {
+    font-family: var(--font-display);
+    font-size: 1.35rem;
+    font-weight: 600;
+    color: var(--primary);
+    margin-bottom: 12px;
+}
+
+.vm-card p {
+    font-family: var(--font-primary);
+    font-size: 0.95rem;
+    line-height: 1.75;
+    color: var(--text-medium);
+    margin: 0;
+}
+
+.leadership-messages-section {
+    padding: 50px 60px;
+    background: var(--white);
+}
+
+.leadership-messages-section .container {
+    max-width: 1400px;
+    margin: 0 auto;
+}
+
+.leadership-messages-section .section-title {
+    text-align: center;
+    font-family: var(--font-display);
+    font-size: 1.8rem;
+    font-weight: 600;
+    color: var(--primary);
+    margin-bottom: 30px;
+    position: relative;
+}
+
+.leadership-messages-section .section-title::after {
+    content: '';
+    display: block;
+    width: 50px;
+    height: 3px;
+    background: linear-gradient(90deg, var(--gold), var(--primary));
+    margin: 10px auto 0;
+    border-radius: 2px;
+}
+
+/* Message Cards Grid */
+.messages-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 40px;
+    max-width: 1400px;
+    margin: 0 auto;
+    justify-content: center;
+}
+
+/* Message Card */
+.message-card {
+    background: var(--bg-cream);
+    border-radius: var(--radius-lg);
+    padding: 40px 35px;
+    border-top: 4px solid var(--primary);
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+}
+
+.message-card:last-of-type {
+    margin-bottom: 0;
+}
+
+.message-card.chairman-card {
+    border-top-color: var(--gold);
+    background: linear-gradient(135deg, rgba(201, 162, 39, 0.1) 0%, var(--bg-cream) 100%);
+}
+
+/* Message Card Photo */
+.message-card .message-photo {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    overflow: hidden;
+    margin: 0 auto 15px;
+    border: 4px solid var(--gold);
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.12);
+    background: linear-gradient(135deg, #e8e8e8 0%, #d0d0d0 100%);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.message-card .message-photo img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+/* Message Leader Info in Card */
+.message-card .message-leader-info {
+    margin-bottom: 15px;
+}
+
+.message-card .message-leader-info h3 {
+    font-family: var(--font-display);
+    font-size: 1.15rem;
+    font-weight: 600;
+    color: var(--text-dark);
+    margin-bottom: 8px;
+}
+
+.message-card .leader-title {
+    display: inline-block;
+    font-family: var(--font-primary);
+    font-size: 0.7rem;
+    font-weight: 600;
+    color: var(--white);
+    background: var(--primary);
+    padding: 5px 12px;
+    border-radius: var(--radius-full);
+}
+
+.message-card.chairman-card .leader-title {
+    background: linear-gradient(135deg, var(--gold) 0%, #D4AF37 100%);
+}
+
+/* Message Content */
+.message-card .message-content {
+    flex: 1;
+}
+
+.message-card .message-text p {
+    font-family: var(--font-primary);
+    font-size: 0.9rem;
+    line-height: 1.7;
+    color: var(--text-dark);
+    text-align: left;
+}
+
+/* Language Switcher in Card */
+.message-card .language-switcher {
+    display: flex;
+    gap: 6px;
+    justify-content: center;
+    margin-bottom: 15px;
+}
+
+.message-sidebar {
+    text-align: center;
+}
+
+.message-photo {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    overflow: hidden;
+    margin: 0 auto 15px;
+    border: 3px solid var(--white);
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+    background: var(--primary-light);
+}
+
+.message-photo img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.message-leader-info h3 {
+    font-family: var(--font-display);
+    font-size: 1rem;
+    font-weight: 600;
+    color: var(--text-dark);
+    margin-bottom: 8px;
+    line-height: 1.3;
+}
+
+.leader-title {
+    display: inline-block;
+    font-family: var(--font-primary);
+    font-size: 0.75rem;
+    font-weight: 600;
+    color: var(--white);
+    background: var(--primary);
+    padding: 5px 14px;
+    border-radius: var(--radius-full);
+}
+
+.chairman-card .leader-title {
+    background: linear-gradient(135deg, var(--gold) 0%, #D4AF37 100%);
+}
+
+/* Language Switcher */
+.language-switcher {
+    display: flex;
+    gap: 8px;
+}
+
+.lang-btn {
+    padding: 5px 14px;
+    font-family: var(--font-primary);
+    font-size: 0.75rem;
+    font-weight: 600;
+    color: var(--text-medium);
+    background: var(--white);
+    border: 2px solid var(--primary-light);
+    border-radius: var(--radius-full);
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.lang-btn:hover {
+    border-color: var(--primary);
+    color: var(--primary);
+}
+
+.lang-btn.active {
+    background: var(--primary);
+    border-color: var(--primary);
+    color: var(--white);
+}
+
+/* Message Content */
+.message-content {
+    /* No special styling needed */
+}
+
+.message-main {
+    flex: 1;
+}
+
+/* Message Text */
+.message-text {
+    display: none;
+}
+
+.message-text.active {
+    display: block;
+}
+
+.message-text p {
+    font-family: var(--font-primary);
+    font-size: 0.9rem;
+    line-height: 1.75;
+    color: var(--text-dark);
+    margin-bottom: 10px;
+}
+
+.message-text p:last-child {
+    margin-bottom: 0;
+}
+
+/* Telugu Text Styling */
+.telugu-text {
+    font-family: 'Noto Sans Telugu', var(--font-primary), sans-serif;
+}
+
+.telugu-text p {
+    font-size: 0.95rem;
+    line-height: 1.9;
+}
+
+/* Collapsible message for long content */
+.message-text.collapsible {
+    max-height: 200px;
+    overflow: hidden;
+    position: relative;
+}
+
+.message-text.collapsible::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    height: 60px;
+    background: linear-gradient(transparent, var(--bg-cream));
+}
+
+.message-text.collapsible.expanded {
+    max-height: none;
+}
+
+.message-text.collapsible.expanded::after {
+    display: none;
+}
+
+.read-more-btn {
+    display: inline-block;
+    margin-top: 10px;
+    font-family: var(--font-primary);
+    font-size: 0.85rem;
+    font-weight: 600;
+    color: var(--primary);
+    background: none;
+    border: none;
+    cursor: pointer;
+    padding: 0;
+}
+
+.read-more-btn:hover {
+    text-decoration: underline;
+}
+
+/* View Leadership Link */
+.view-leadership-link {
+    text-align: center;
+    margin-top: 40px;
+}
+
+.view-leadership-link .btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.view-leadership-link .btn svg {
+    transition: transform 0.3s ease;
+}
+
+.view-leadership-link .btn:hover svg {
+    transform: translateX(5px);
+}
+
+/* About Page Responsive */
+@media (max-width: 992px) {
+    .vm-grid {
+        grid-template-columns: 1fr;
+        gap: 20px;
+    }
+    
+    .founding-quote-section,
+    .vision-mission-section,
+    .leadership-messages-section {
+        padding: 40px 40px;
+    }
+    
+    .quote-text {
+        font-size: 1.1rem;
+    }
+    
+    .message-header-simple {
+        flex-direction: column;
+        text-align: center;
+    }
+}
+
+@media (max-width: 768px) {
+    .founding-quote-section,
+    .vision-mission-section,
+    .leadership-messages-section {
+        padding: 35px 25px;
+    }
+    
+    .quote-box {
+        padding: 25px 20px;
+    }
+    
+    .quote-text {
+        font-size: 1rem;
+    }
+    
+    .messages-grid {
+        grid-template-columns: 1fr;
+        gap: 25px;
+    }
+    
+    .message-card {
+        padding: 20px 18px;
+    }
+    
+    .message-card .message-photo {
+        width: 80px;
+        height: 80px;
+    }
+    
+    .vm-card {
+        padding: 25px 20px;
+    }
+    
+    .message-header-simple .message-leader-info h3 {
+        font-size: 1.15rem;
+    }
+}
