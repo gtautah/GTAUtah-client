@@ -9,13 +9,22 @@ import { EventDetailsComponent } from './components/events/event-details/event-d
 import { LeadershipComponent } from './components/leadership/leadership.component';
 import { GalleryComponent } from './components/gallery/gallery.component';
 import { WorkInProgressComponent } from './components/shared/work-in-progress/work-in-progress.component';
+import { CalendarComponent } from './components/calendar/calendar.component';
+import { AboutUsComponent } from './components/about-us/about-us.component';
+import { BlogComponent } from './components/blog/blog.component';
 
 const routes: Routes = [
   { path: '', component: HomeComponent },
   { path: 'home', component: HomeComponent },
-  { path: 'leadership', component: WorkInProgressComponent },
+  { path: 'about-us', component: AboutUsComponent },
+  { path: 'leadership', component: LeadershipComponent },
   { path: 'contact', component: ContactComponent },
-  { path: 'events', component: LeadershipComponent },
+  { path: 'events', component: EventsComponent },
+  { path: 'membership', component: MembershipComponent },
+  {path: 'blog', component: BlogComponent},
+
+  { path: 'calendar', component: CalendarComponent },
+  
   // {path: 'work-in-progress', component: WorkInProgressComponent},
   {
     path: 'events/:id',

@@ -1,21 +1,141 @@
-<div class="events-container">
-  <h2 class="section-title">Upcoming Events</h2>
+<main>
+        <!-- Events Hero - Split Layout -->
+        <section class="events-hero-split">
+            <div class="hero-split-content">
+                <span class="hero-badge">🌸 Featured Event</span>
+                <h1>Bathukamma 2026</h1>
+                <div class="hero-date-box">
+                    <div class="date-day">05</div>
+                    <div class="date-details">
+                        <span class="date-month">October</span>
+                        <span class="date-year">2026</span>
+                    </div>
+                </div>
+                <p class="hero-location">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
+                    Salt Lake City, Utah
+                </p>
+                <p class="hero-description">Join us for the vibrant Bathukamma festival celebrating Telangana's beautiful floral heritage and traditions</p>
+                <div class="hero-buttons">
+                    <a href="#" class="btn btn-primary">Register Now</a>
+                    <a href="event-detail.html" class="btn btn-secondary">View Details</a>
+                </div>
+            </div>
+            <div class="hero-split-image">
+                <img src="assets/events/bathukamma_eventcard.png" alt="Bathukamma Festival">
+            </div>
+            <a href="#upcoming-events" class="scroll-indicator">
+                <span>View All Events</span>
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 5v14M19 12l-7 7-7-7"/></svg>
+            </a>
+        </section>
 
-  <div class="card-grid">
-    <div class="event-card"
-         *ngFor="let event of events"
-         (click)="goToDetails(event.id)">
+        <!-- Upcoming Events -->
+        <section class="events-listing" id="upcoming-events">
+            <h2 class="section-title">Upcoming <span>Events</span></h2>
+            
+            <div class="events-grid">
+                <!-- Event Card 1 -->
+                <div class="event-card">
+                    <div class="card-image">
+                        <img src="assets/events/bathukamma_eventcard.png" alt="Bathukamma 2026">
+                    </div>
+                    <div class="card-content">
+                        <h3>Bathukamma 2026</h3>
+                        <div class="card-info">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="4" width="18" height="18" rx="2" ry="2"/><line x1="16" y1="2" x2="16" y2="6"/><line x1="8" y1="2" x2="8" y2="6"/><line x1="3" y1="10" x2="21" y2="10"/></svg>
+                            <span>Oct 5 - Salt Lake City</span>
+                        </div>
+                        <div class="card-buttons">
+                            <a href="#" class="btn btn-primary btn-sm">Register</a>
+                            <a href="event-detail.html" class="btn btn-outline-dark btn-sm">Details</a>
+                        </div>
+                    </div>
+                </div>
 
-      <div class="card-image"
-           [style.backgroundImage]="'url(' + event.image + ')'">
-      </div>
+                <!-- Event Card 2 -->
+                <div class="event-card">
+                    <div class="card-image">
+                        <img src="assets/events/bonalu_eventcard.png" alt="Bonalu Festival">
+                    </div>
+                    <div class="card-content">
+                        <h3>Bonalu Festival</h3>
+                        <div class="card-info">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="4" width="18" height="18" rx="2" ry="2"/><line x1="16" y1="2" x2="16" y2="6"/><line x1="8" y1="2" x2="8" y2="6"/><line x1="3" y1="10" x2="21" y2="10"/></svg>
+                            <span>Jul 20 - South Jordan, Utah</span>
+                        </div>
+                        <div class="card-buttons">
+                            <a href="#" class="btn btn-primary btn-sm">Register</a>
+                            <a href="event-detail.html" class="btn btn-outline-dark btn-sm">Details</a>
+                        </div>
+                    </div>
+                </div>
 
-      <div class="card-content">
-        <h3>{{ event.title }}</h3>
-        <p>{{ event.description }}</p>
-        <span class="view-more">View Details →</span>
-      </div>
+                <!-- Event Card 3 -->
+                <div class="event-card">
+                    <div class="card-image">
+                        <img src="assets/events/telangana_formationday_eventcard.png" alt="Telangana Formation Day">
+                    </div>
+                    <div class="card-content">
+                        <h3>Telangana Formation Day</h3>
+                        <div class="card-info">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="4" width="18" height="18" rx="2" ry="2"/><line x1="16" y1="2" x2="16" y2="6"/><line x1="8" y1="2" x2="8" y2="6"/><line x1="3" y1="10" x2="21" y2="10"/></svg>
+                            <span>Jun 2 - Salt Lake City, Utah</span>
+                        </div>
+                        <div class="card-buttons">
+                            <a href="#" class="btn btn-primary btn-sm">Register</a>
+                            <a href="event-detail.html" class="btn btn-outline-dark btn-sm">Details</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
 
-    </div>
-  </div>
-</div>
+            <!-- Scroll to Past Events -->
+            <a href="#past-events" class="section-scroll-indicator">
+                <span>Past Events</span>
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 5v14M19 12l-7 7-7-7"/></svg>
+            </a>
+        </section>
+
+        <!-- Past Events -->
+        <section class="events-listing past-events" id="past-events">
+            <h2 class="section-title">Past <span>Events</span></h2>
+            
+            <div class="events-grid">
+                <!-- Past Event 1 - Grand Pickleball League -->
+                <div class="event-card past">
+                    <div class="card-image">
+                        <img src="assets/events/gpl_season1_eventcard.png" alt="Grand Pickleball League - Season 1">
+                    </div>
+                    <div class="card-content">
+                        <h3>Grand Pickleball League - Season 1</h3>
+                        <div class="card-info">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="4" width="18" height="18" rx="2" ry="2"/><line x1="16" y1="2" x2="16" y2="6"/><line x1="8" y1="2" x2="8" y2="6"/><line x1="3" y1="10" x2="21" y2="10"/></svg>
+                            <span>Jan 31, 2026 - Utah</span>
+                        </div>
+                        <div class="card-buttons">
+                            <a href="https://gta-sports.org/stream.html" class="btn btn-primary btn-sm" target="_blank">View Standings</a>
+                            <a href="#" class="btn btn-outline-dark btn-sm">View Gallery</a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Past Event 2 - Chinna Bathukamma 2025 -->
+                <div class="event-card past">
+                    <div class="card-image">
+                        <img src="assets/events/bathukamma_eventcard.png" alt="Chinna Bathukamma 2025">
+                    </div>
+                    <div class="card-content">
+                        <h3>Chinna Bathukamma 2025</h3>
+                        <div class="card-info">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="4" width="18" height="18" rx="2" ry="2"/><line x1="16" y1="2" x2="16" y2="6"/><line x1="8" y1="2" x2="8" y2="6"/><line x1="3" y1="10" x2="21" y2="10"/></svg>
+                            <span>Oct 2025 - Indian Cultural Center, South Jordan</span>
+                        </div>
+                        <div class="card-buttons">
+                            <a href="#" class="btn btn-outline-dark btn-sm">View Gallery</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>

@@ -1,49 +1,45 @@
-<section class="section" style="padding-top: 40px;">
-  <div class="container">
-    <h2 class="section-title">Membership Plans</h2>
-    <p style="text-align: center; font-size: 1.1rem; color: #666; margin-bottom: 3rem; max-width: 800px; margin-left: auto; margin-right: auto;">
-      Join GTA Utah and become part of a vibrant community dedicated to promoting sports and cultural activities. 
-      Choose the membership plan that best fits your needs.
-    </p>
-    <div class="membership-cards">
-      <div class="membership-card" [class.featured]="membership.featured" *ngFor="let membership of membershipTypes">
-        <div class="membership-type">{{ membership.type }}</div>
-        <div class="membership-price">{{ membership.price }}</div>
-        <div style="color: #999; margin-bottom: 2rem;">{{ membership.period }}</div>
-        <ul class="membership-features">
-          <li *ngFor="let feature of membership.features">✓ {{ feature }}</li>
-        </ul>
-        <a routerLink="/contact" class="btn" style="margin-top: 2rem; display: inline-block;">Join Now</a>
-      </div>
-    </div>
-  </div>
-</section>
-
-<section class="section" style="background-color: #f9f9f9;">
-  <div class="container">
-    <h2 class="section-title">Membership Benefits</h2>
-    <div class="card-grid">
-      <div class="card" *ngFor="let benefit of benefits">
-        <div class="card-content" style="text-align: center;">
-          <div style="font-size: 4rem; margin-bottom: 1rem;">{{ benefit.icon }}</div>
-          <h3 class="card-title">{{ benefit.title }}</h3>
-          <p class="card-text">{{ benefit.description }}</p>
-        </div>
-      </div>
-    </div>
-  </div>
-</section>
-
-<section class="section">
-  <div class="container">
-    <div style="max-width: 800px; margin: 0 auto; text-align: center; background: white; padding: 3rem; border-radius: 10px; box-shadow: 0 5px 15px rgba(0,0,0,0.1);">
-      <h2 style="color: #1e3c72; margin-bottom: 1rem;">Ready to Join?</h2>
-      <p style="color: #666; margin-bottom: 2rem; line-height: 1.8;">
-        Become a member today and start enjoying all the benefits of being part of the GTA Sports community. 
-        For questions or assistance with registration, please contact us.
-      </p>
-      <a routerLink="/contact" class="btn">Contact Us</a>
-      <a routerLink="/events" class="btn btn-secondary" style="margin-left: 1rem;">View Events</a>
-    </div>
-  </div>
-</section>
+ <main>
+        <!-- Coming Soon Section -->
+        <section class="coming-soon-page">
+            <div class="coming-soon-content">
+                <div class="coming-soon-icon">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="80" height="80" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+                        <path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"></path>
+                        <circle cx="9" cy="7" r="4"></circle>
+                        <path d="M23 21v-2a4 4 0 0 0-3-3.87"></path>
+                        <path d="M16 3.13a4 4 0 0 1 0 7.75"></path>
+                    </svg>
+                </div>
+                <h1>Membership</h1>
+                <div class="wip-badge">
+                    <span class="pulse"></span>
+                    Work in Progress
+                </div>
+                <p>We're building something amazing! Our membership portal is currently under development.</p>
+                <div class="coming-soon-features">
+                    <div class="feature-item">
+                        <span class="feature-icon">🎫</span>
+                        <span>Online Registration</span>
+                    </div>
+                    <div class="feature-item">
+                        <span class="feature-icon">💳</span>
+                        <span>Easy Payments</span>
+                    </div>
+                    <div class="feature-item">
+                        <span class="feature-icon">👨‍👩‍👧‍👦</span>
+                        <span>Family Memberships</span>
+                    </div>
+                    <div class="feature-item">
+                        <span class="feature-icon">🎁</span>
+                        <span>Member Benefits</span>
+                    </div>
+                </div>
+                <p class="notify-text">In the meantime, contact us to join our community:</p>
+                <a href="mailto:gtautah@globaltelangana.org" class="btn btn-primary">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path><polyline points="22,6 12,13 2,6"></polyline></svg>
+                    gtautah&#64;globaltelangana.org
+                </a>
+                <a href="index.html" class="btn btn-secondary">Back to Home</a>
+            </div>
+        </section>
+    </main>
